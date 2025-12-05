@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 function App() {
   const tracks = [
     {
@@ -12,13 +14,36 @@ function App() {
     },
   ]
 
+  const selectedTrackId = 1
+
+  if (tracks === null) {
+    return (
+      <>
+        <h1>MusicFun Player</h1>
+        <span>Loading...</span>
+      </>
+    )
+  }
+
+  if (tracks.length === 0) {
+    return (
+      <>
+        <h1>MusicFun Player</h1>
+        <span>No tracks</span>
+      </>
+    )
+  }
+
   return (
     <>
       <h1>MusicFun Player</h1>
 
       <ul>
         {tracks.map((track) => (
-          <li key={track.id}>
+          <li
+            key={track.id}
+            style={{ border: `1px solid ${track.id === selectedTrackId ? 'orange' : 'transparent'}` }}
+          >
             <div>{track.title}</div>
             <audio src={track.url} controls></audio>
           </li>
