@@ -61,7 +61,10 @@ function App() {
           {tracks.map((track) => (
             <li
               key={track.id}
-              onClick={() => setSelectedTrackId(track.id)}
+              onClick={() => {
+                setSelectedTrackId(track.id)
+                setSelectedTrack(null)
+              }}
               style={{ border: `1px solid ${track.id === selectedTrackId ? 'orange' : 'transparent'}` }}
             >
               <div>{track.attributes.title}</div>
@@ -77,7 +80,6 @@ function App() {
 
           {!selectedTrack && !selectedTrackId && <p>Track is not selected</p>}
           {!selectedTrack && selectedTrackId && <p>Loading...</p>}
-          {selectedTrack && selectedTrackId && selectedTrackId !== selectedTrackId && <p>Loading...</p>}
           {selectedTrack && (
             <>
               <h3>{selectedTrack.attributes.title}</h3>
