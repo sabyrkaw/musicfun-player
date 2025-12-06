@@ -87,7 +87,6 @@ function App() {
               <p>{selectedTrack.attributes.lyrics || 'No lyrics'}</p>
             </>
           )}
-
         </div>
       </div>
     </>
