@@ -61,9 +61,7 @@ function App() {
           {tracks.map((track) => (
             <li
               key={track.id}
-              onClick={() => {
-                setSelectedTrackId(track.id)
-              }}
+              onClick={() => setSelectedTrackId(track.id)}
               style={{ border: `1px solid ${track.id === selectedTrackId ? 'orange' : 'transparent'}` }}
             >
               <div>{track.attributes.title}</div>
