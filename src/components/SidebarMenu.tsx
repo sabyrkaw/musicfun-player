@@ -1,3 +1,3 @@
-export function SidebarMenu() {
+export const SidebarMenu = () => {
   return <div>SidebarMenu</div>
 }

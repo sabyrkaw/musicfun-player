@@ -2,7 +2,7 @@ import { TrackList } from './components/TrackList.tsx'
 import { TrackDetails } from './components/TrackDetails.tsx'
 import { useState } from 'react'
 
-export function MainPage() {
+export const MainPage = () => {
 
   const [trackId, setTrackId] = useState<string | null>(null)
 

@@ -11,7 +11,7 @@ type Props = {
   trackId: string | null
 }
 
-export function TrackDetails({ trackId }: Props) {
+export const TrackDetails = ({ trackId }: Props) => {
   const [selectedTrack, setSelectedTrack] = useState<GetTrackDetailsOutputData | null>(null)
 
   useEffect(() => {

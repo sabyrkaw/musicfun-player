@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import TrackItem, { type TrackListItemOutput } from './TrackItem.tsx'
+import { TrackItem, type TrackListItemOutput } from './TrackItem.tsx'
 
 
 type Props = {
@@ -7,7 +7,7 @@ type Props = {
   onTrackSelect: (id: string | null) => void
 }
 
-export function TrackList({ selectedTrackId, onTrackSelect }: Props) {
+export const TrackList = ({ selectedTrackId, onTrackSelect }: Props) => {
   const [tracks, setTracks] = useState<TrackListItemOutput[] | null>(null)
 
   useEffect(() => {

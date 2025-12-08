@@ -18,7 +18,7 @@ type Props = {
   track: TrackListItemOutput
 }
 
-const TrackItem = ({ track, onSelect, isSelected }: Props) => {
+export const TrackItem = ({ track, onSelect, isSelected }: Props) => {
   const handleClick = () => onSelect?.(track.id)
 
   return (
@@ -34,5 +34,3 @@ const TrackItem = ({ track, onSelect, isSelected }: Props) => {
     </li>
   )
 }
-
-export default TrackItem
